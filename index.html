@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>4-2 | Dhahampasala Web Conferencing</title>
+    <meta property="og:title" content="4-2 | Dhahampasala Web Conferencing"/>
+    <meta property="og:image" content="http://www.dhahampasala.org/wp-content/themes/belief/fb_screenshot.png"/>
+    <meta property="og:description" content="Dhahampasala Web Conferencing"/>
+    <meta description="Student access page for class 4-2"/>
+    <meta itemprop="description" content="Student access page for class 4-2"/>
+    <meta itemprop="image" content="http://www.dhahampasala.org/wp-content/themes/belief/fb_screenshot.png"/>
+    <link rel="icon" type="image/png" href="https://dhahampasala-webconference.thisas.dev/4-2/favicon.png"/>
+    <link href="css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" />
+    <script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <script src="https://meet.jit.si/external_api.js"></script>
+    <script>
+        var domain = "meet.jit.si";
+        var options = {
+            roomName: "kzFe34PP6K5Cbs",
+            width: window.innerWidth,
+            height: window.innerHeight,
+            parentNode: undefined,
+            configOverwrite: {
+              startWithAudioMuted: true,
+              disableKick: true,
+            remoteVideoMenu: { disableKick: true },
+            disableRemoteMute: true
+
+            },
+            interfaceConfigOverwrite: {
+                SETTINGS_SECTIONS: [ 'devices', 'language', 'profile' ],
+                filmStripOnly: false,
+                TOOLBAR_BUTTONS: ['microphone', 'camera', 'closedcaptions', 'fullscreen', 'fodeviceselection', 'hangup', 'profile', 'chat', 'settings', 'raisehand', 'videoquality', 'filmstrip', 'stats', 'shortcuts', 'tileview', 'videobackgroundblur',  'help'],
+                BRAND_WATERMARK_LINK: 'http://www.dhahampasala.org/wp-content/uploads/2015/11/logo-2.png',
+                DEFAULT_LOGO_URL: 'http://www.dhahampasala.org/wp-content/uploads/2015/11/logo-2.png',
+                DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Student',
+                SHOW_CHROME_EXTENSION_BANNER: false,
+                SHOW_BRAND_WATERMARK: false,
+                HIDE_INVITE_MORE_HEADER: false,
+                MOBILE_APP_PROMO: true
+            }
+        }
+        var api = new JitsiMeetExternalAPI(domain, options);
+    </script>
+</body>
+</html>
